@@ -1,12 +1,19 @@
-
+  var $forceBox1 = $(".forceBox1");
+  // var w = $forceBox1.width();
+	// var h = window.innerHeight;
   var w = 900;
-	var h = 840;
+	var h = 765;
   var g = 0.05;
   var c = -800;
   var d = 275;
 
+
+
   var svg1 = d3.select(".forceBox1")
-          .append("svg")
+          .insert("svg",":nth-child(2)")
+          // .append("svg")
+          // .attr("width", w)
+          // .attr("height", h);
           .attr("viewBox", "0 0 " + w + " " + h )
           .attr("preserveAspectRatio", "xMidYMid meet");
 
@@ -17,12 +24,12 @@
 		var dataset1 = {
 			nodes:[
 					{name1:"Who",name2:"am I?", color: "#FAF9F4", radius: 90,
-              description: 'I am a French-Australian web developer who became passionate by web development lately. The 12 weeks fulltime course that I just did with General Assembly confirmed everything I thought: I am willing to become a web developer.<br><span class="whoAmIspan">Why did I decide to become a web developer?</span><br>I have been a civil engineer/project manager for the past 8 years. Looking for new challenges, I started to get involved in the start-up community. I even decided to start my own business: Value Your Time (www.valueyourtime.com.au).<br>But after few months I realised that I enjoy developing web solutions much more than every other aspect of the business. I heard about Web Development Bootcamp and decided to go to General Assembly Web Development Immersive Program.<br>That experience confirmed everything I thought: I am willing to become a web developer.'},
+              description: 'I am a French-Australian web developer who became passionate by web development lately. The 12 weeks fulltime course that I just did with General Assembly confirmed everything I thought: I am willing to become a web developer.<br>Why did I decide to become a web developer?<br>I have been a civil engineer/project manager for the past 8 years. Looking for new challenges, I started to get involved in the start-up community. I even decided to start my own business: Value Your Time (www.valueyourtime.com.au).<br>But after few months I realised that I enjoy developing web solutions much more than every other aspect of the business. I heard about Web Development Bootcamp and decided to go to General Assembly Web Development Immersive Program.<br>That experience confirmed everything I thought: I am willing to become a web developer.<br>You can see below the links to the pdf version of my resume and to my linkedin:<br><a href="CedricAmoyal2016WD.pdf" target="_blank"><span><i class="fa fa-file-text-o" aria-hidden="true"></i></span></a> <a href="https://au.linkedin.com/in/cedric-amoyal-83b5a747" target="_blank"><span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a>'},
 
 	        {name1:"Ex Civil",name2: "Engineer", color: "#52B4AF", radius: 70,
               description: "#"},
 					{name1:"New Web",name2:"Developer", color: "rgb(183, 178, 224)", radius: 70,
-              description: '<span class="whoAmIspan">What did I learn during the WDi program?</span><br>The WDi Program taught me the skills I need to kickstart my career as a web developer.<br>From programming fundamentals (HTML, CSS, JavaScript, jQuery, AJAX, Ruby) to launching full-stack web apps (Rails, Backbone.js, Bootstrap), I learned to solve problems with code while applying industry best practices in a collaborative environment  (Github, Heroku).'},
+              description: 'What did I learn during the WDi program?<br>The WDi Program taught me the skills I need to kickstart my career as a web developer.<br>From programming fundamentals (HTML, CSS, JavaScript, jQuery, AJAX, Ruby) to launching full-stack web apps (Rails, Backbone.js, Bootstrap), I learned to solve problems with code while applying industry best practices in a collaborative environment  (Github, Heroku).'},
 
 					{name1:"Project",name2:"Manager", color: "#B6DEDC", radius: 55,
               description: "#"},
@@ -34,11 +41,11 @@
           {name1:"Project 4",name2:"Final", color: "rgb(203, 170, 193)", radius: 55,
               description: 'Link to the application:<br><a class="webDevAtag" href="#" target="_blank">#</a> <br>Link to the code:<br><a class="webDevAtag" href="#" target="_blank">#</a>'},
           {name1:"Twitter Data",name2:"Visualisation", color: "rgb(203, 170, 193)", radius: 55,
-              description: 'Link to the application:<br><a class="webDevAtag" href="#" target="_blank">#</a> <br>Link to the code:<br><a class="webDevAtag" href="https://github.com/cedricamoyal/project3group " target="_blank">https://github.com/cedricamoyal/project3group</a>'},
+              description: 'Link to the application:<a class="webDevAtag" href="https://project3group.herokuapp.com/" target="_blank"><span class="devicons devicons-heroku"></span></a> <br>Link to the code:<a class="webDevAtag" href="https://github.com/cedricamoyal/project3group " target="_blank"><span class="devicons devicons-github_badge"></span></a>'},
           {name1:"Travel",name2:"The World", color: "rgb(203, 170, 193)", radius: 55,
-              description: 'Link to the application:<br><a class="webDevAtag" href="https://cedricproject2.herokuapp.com/login " target="_blank">https://cedricproject2.herokuapp.com/login</a> <br>Link to the code:<br><a class="webDevAtag" href="https://github.com/cedricamoyal/project2cedricheroku " target="_blank">https://github.com/cedricamoyal/project2cedricheroku</a>'},
+              description: 'Link to the application:<a class="webDevAtag" href="https://cedricproject2.herokuapp.com/login " target="_blank"><span class="devicons devicons-heroku"></span></a> <br>Link to the code:<a class="webDevAtag" href="https://github.com/cedricamoyal/project2cedricheroku " target="_blank"><span class="devicons devicons-github_badge"></a>'},
           {name1:"Tic",name2:"Tac Toe", color: "rgb(203, 170, 193)", radius: 55,
-              description: 'Link to the application:<br><a class="webDevAtag" href="http://cedricamoyal.github.io/Cedricwebsite " target="_blank">http://cedricamoyal.github.io/Cedricwebsite</a> <br>Link to the code:<br><a class="webDevAtag" href="https://github.com/cedricamoyal/Cedricwebsite " target="_blank">https://github.com/cedricamoyal/Cedricwebsite</a>'},
+              description: 'Link to the application:<a class="webDevAtag" href="http://cedricamoyal.github.io/Cedricwebsite " target="_blank"><span class="devicons devicons-github_alt"></span></a> <br>Link to the code:<a class="webDevAtag" href="https://github.com/cedricamoyal/Cedricwebsite " target="_blank"><span class="devicons devicons-github_badge"></span></a>'},
 
 			],
 			edges:[
@@ -67,8 +74,9 @@
 						.enter()
 						.append("line")
             .attr('class', 'line1')
-						.style("stroke", "#ccc")
-						.style("stroke-width", 1);
+						// .style("stroke", "#ccc")
+            .style("stroke", "#555")
+						.style("stroke-width", 3);
 
 
     var $forceBoxText1 = $(".forceBoxText1");
@@ -81,6 +89,7 @@
 						.attr("r", function(d) { return d.radius; })
             .style("fill", function(d) { return d.color; })
             .style("stroke", "#555")
+            .style("stroke-width", 3)
 						.call(force1.drag)
             .on("click", function (d) {
               $forceBoxText1.empty();
@@ -93,7 +102,7 @@
                     $descriptionText1.html(d.description);
                     $forceBoxText1.append( $descriptionText1 );
 
-              console.log("you double clicked on the circle1: " + d.name);
+              console.log("you clicked on the circle1: " + d.name1 + " " + d.name2);
             });
 
 		var label1 = svg1.selectAll(".mytext1")
@@ -117,7 +126,7 @@
                     $descriptionText1.html(d.description);
                     $forceBoxText1.append( $descriptionText1 );
 
-              console.log("you double clicked on the mytext1: " + d.name);
+              console.log("you clicked on the mytext1: " + d.name1 + " " + d.name2);
             });
 
     var p1 = label1.append('tspan');

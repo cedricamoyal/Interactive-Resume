@@ -1,45 +1,132 @@
-.forceBoxText1{
-  /*border: 1px solid gainsboro;*/
-  /*height: 100%;*/
-  text-align: left;
-  /*padding: 10px;*/
+body {
+  /*background-image:url("http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSquares_1920x1234.jpg");*/
+  /*background-image:url("http://www.easyfreepatterns.com/patterns/7/light-blue-chevron-backgrounds-fashionplacefacecom-7804.png");*/
+    /*background-image:url("light-blue-chevron-backgrounds-fashionplacefacecom-7804.png");*/
+    /*background-image:url("http://wallpapercave.com/wp/xX2GRj6.gif");*/
+    background-image:url("xX2GRj6.gif");
+
+  background-size: cover;
 }
+
+.top {
+  height: 15px;
+}
+
+.forceBoxText1{
+  /*border: 1px solid #555;*/
+  text-align: left;
+  padding: 10px;
+  color: #FAF9F4;
+  /*background-color: black;*/
+}
+
+.forceBoxText1 p {
+  color: #FAF9F4;
+}
+
+
 
 .webDevAtag {
   color: rgb(203, 170, 193);
 }
-.whoAmIspan {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 35px;
 
-}
 .civilAtag {
   color: "#52B4AF";
 }
-
 .forceBox1{
-  /*border: 1px solid green;*/
   width: 100%;
 }
-
-
-
-
-.row{
-  /*border: 2px solid orange;*/
+.container{
+    padding-left: 0;
+    padding-right: 0;
+    border: 5px double #555;
 }
 
 .col-md-8{
-  /*border: 2px solid black;*/
-  padding: 0;
-  /*height: 95vh;*/
+  border-right: 5px double #555;
+  padding: 6px;
 }
 .col-md-4{
-  /*border: 2px solid black;*/
-  padding: 0;
-  /*height: 95vh;*/
+  /*border: 5px double #555;*/
+  padding: 6px;
 }
 svg {
-  /*border: 1px solid gainsboro;*/
+  /*border: 1px solid blue;*/
+  /*margin-bottom: 0;*/
+}
+
+span {
+  /*border: 2px dashed green;*/
+  display:inline-block;
+  vertical-align:middle;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 45px;
+}
+
+/*.fa {
+  color: #555;
+}*/
+
+.animatedText p{
+  color: #FAF9F4;
+  /*background-color: black;*/
+
+  margin-bottom: 2px;
+  font-size: 15px;
+  font-weight:500;
+  /*margin: 10px 0 0 10px;*/
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  animation: type1 6s steps(100, end);
+}
+
+
+
+.animatedText2 p{
+  color: #FAF9F4;
+  /*background-color: black;*/
+
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight:500;
+  /*margin: 10px 0 0 10px;*/
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  animation: type2 10s steps(80, end);
+}
+
+.animatedText2 {
+  text-align: right;
+  /*border: 1px solid pink;*/
+}
+
+span.blink {
+  animation: blink 1s infinite;
+  font-size: 12px;
+}
+
+@keyframes type1{
+  from { width: 0; }
+}
+
+@keyframes type2{
+  0%{width: 0;}
+  61%{width: 0;}
+  100%{ width: 100; }
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+@media (max-width: 992px) {
+
+  .col-md-8{
+    border-bottom: 5px double #555;
+    border-right: none;
+  }
+
 }
