@@ -6,10 +6,24 @@ body {
     background-image:url("xX2GRj6.gif");
 
   background-size: cover;
+  font-family: arial;
 }
 
+span {
+  /*border: 2px dashed green;*/
+  display:inline-block;
+  vertical-align:middle;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 45px;
+}
+
+/*.fa {
+  color: #555;
+}*/
+
 .top {
-  height: 15px;
+  height: 10px;
 }
 
 .forceBoxText1{
@@ -22,6 +36,7 @@ body {
 
 .forceBoxText1 p {
   color: #FAF9F4;
+  font-size: 16px;
 }
 
 
@@ -31,8 +46,13 @@ body {
 }
 
 .civilAtag {
-  color: "#52B4AF";
+  color: #52B4AF;
 }
+
+.whoAmI {
+  color: #FAF9F4;
+}
+
 .forceBox1{
   width: 100%;
 }
@@ -54,19 +74,6 @@ svg {
   /*border: 1px solid blue;*/
   /*margin-bottom: 0;*/
 }
-
-span {
-  /*border: 2px dashed green;*/
-  display:inline-block;
-  vertical-align:middle;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 45px;
-}
-
-/*.fa {
-  color: #555;
-}*/
 
 .animatedText p{
   color: #FAF9F4;
@@ -105,7 +112,7 @@ span {
 
 span.blink {
   animation: blink 1s infinite;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 @keyframes type1{
@@ -128,5 +135,4 @@ span.blink {
     border-bottom: 5px double #555;
     border-right: none;
   }
-
 }
