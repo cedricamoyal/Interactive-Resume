@@ -52,7 +52,7 @@ span {
 
 
 .civilAtag {
-  color: #52B4AF;
+  color: #B6DEDC;
 }
 
 .whoAmI {
@@ -138,6 +138,14 @@ span.purplePlanets {
   margin-left: 0;
   margin-right: 0;
 }
+
+span.greenCivil {
+  color: #B6DEDC;
+  font-size: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 
 .GA_logo {
   text-align: center;
