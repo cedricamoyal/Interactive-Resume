@@ -39,11 +39,17 @@ span {
   font-size: 16px;
 }
 
+.forceBoxText1 h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
 
 
 .webDevAtag {
   color: rgb(203, 170, 193);
 }
+
 
 .civilAtag {
   color: #52B4AF;
@@ -55,6 +61,7 @@ span {
 
 .forceBox1{
   width: 100%;
+  /*border: 3px solid pink;*/
 }
 .container{
     padding-left: 0;
@@ -78,14 +85,16 @@ svg {
 .animatedText p{
   color: #FAF9F4;
   /*background-color: black;*/
+  /*border: 2px solid blue;*/
 
   margin-bottom: 2px;
-  font-size: 15px;
-  font-weight:500;
+
+  font-size: 16px;
+  /*font-weight:500;*/
   /*margin: 10px 0 0 10px;*/
   white-space: nowrap;
   overflow: hidden;
-  width: 50em;
+  width: 100%;
   animation: type1 6s steps(100, end);
 }
 
@@ -94,25 +103,49 @@ svg {
 .animatedText2 p{
   color: #FAF9F4;
   /*background-color: black;*/
+  /*border: 2px solid blue;*/
 
   margin-bottom: 0;
-  font-size: 15px;
-  font-weight:500;
+  font-size: 16px;
+  /*font-weight:500;*/
   /*margin: 10px 0 0 10px;*/
   white-space: nowrap;
   overflow: hidden;
-  width: 50em;
+  width: 100%;
   animation: type2 10s steps(80, end);
 }
 
 .animatedText2 {
   text-align: right;
-  /*border: 1px solid pink;*/
+  /*border: 2px solid green;*/
 }
 
 span.blink {
   animation: blink 1s infinite;
-  font-size: 15px;
+  font-size: 16px;
+
+}
+span.GA {
+  color: red;
+  font-size: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+span.purplePlanets {
+  color: rgb(203, 170, 193);
+  font-size: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.GA_logo {
+  text-align: center;
+  /*border: 1px solid red;*/
+  margin-bottom: 10px;
+}
+.GA_logo img {
+  width: 65px;
 }
 
 @keyframes type1{
@@ -121,7 +154,7 @@ span.blink {
 
 @keyframes type2{
   0%{width: 0;}
-  61%{width: 0;}
+  55%{width: 0;}
   100%{ width: 100; }
 }
 
