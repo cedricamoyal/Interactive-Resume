@@ -3,7 +3,10 @@ body {
   /*background-image:url("http://www.easyfreepatterns.com/patterns/7/light-blue-chevron-backgrounds-fashionplacefacecom-7804.png");*/
     /*background-image:url("light-blue-chevron-backgrounds-fashionplacefacecom-7804.png");*/
     /*background-image:url("http://wallpapercave.com/wp/xX2GRj6.gif");*/
-    background-image:url("xX2GRj6.gif");
+    /*background-image:url("stars.png");*/
+    background-image:url("http://il6.picdn.net/shutterstock/videos/10419008/thumb/2.jpg");
+
+  background-color: lightgrey;
 
   background-size: cover;
   font-family: arial;
@@ -23,19 +26,21 @@ span {
 }*/
 
 .top {
-  height: 10px;
+  height: 5px;
 }
 
 .forceBoxText1{
   /*border: 1px solid #555;*/
   text-align: left;
   padding: 10px;
-  color: #FAF9F4;
+  color: black;
+  /*color: #FAF9F4;*/
   /*background-color: black;*/
 }
 
 .forceBoxText1 p {
-  color: #FAF9F4;
+  /*color: #FAF9F4;*/
+  color: black;
   font-size: 16px;
 }
 
@@ -57,6 +62,12 @@ span {
 
 .whoAmI {
   color: #FAF9F4;
+}
+
+.whoAmI span {
+  margin-top: 6px;
+  margin-bottom: 6px;
+
 }
 
 .forceBox1{
@@ -83,7 +94,8 @@ svg {
 }
 
 .animatedText p{
-  color: #FAF9F4;
+  /*color: #FAF9F4;*/
+  color: black;
   /*background-color: black;*/
   /*border: 2px solid blue;*/
 
@@ -101,7 +113,8 @@ svg {
 
 
 .animatedText2 p{
-  color: #FAF9F4;
+  /*color: #FAF9F4;*/
+  color: black;
   /*background-color: black;*/
   /*border: 2px solid blue;*/
 
