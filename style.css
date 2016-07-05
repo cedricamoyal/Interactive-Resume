@@ -4,9 +4,9 @@ body {
     /*background-image:url("light-blue-chevron-backgrounds-fashionplacefacecom-7804.png");*/
     /*background-image:url("http://wallpapercave.com/wp/xX2GRj6.gif");*/
     /*background-image:url("stars.png");*/
-    background-image:url("http://il6.picdn.net/shutterstock/videos/10419008/thumb/2.jpg");
+    /*background-image:url("http://www.themesrefinery.net/wp-content/uploads/2014/06/light-background-design-website-9.jpg");*/
 
-  background-color: lightgrey;
+  background-color: white;
 
   background-size: cover;
   font-family: arial;
@@ -33,14 +33,14 @@ span {
   /*border: 1px solid #555;*/
   text-align: left;
   padding: 10px;
-  color: black;
+  color: #555;
   /*color: #FAF9F4;*/
-  /*background-color: black;*/
+  /*background-color: #555;*/
 }
 
 .forceBoxText1 p {
   /*color: #FAF9F4;*/
-  color: black;
+  color: #555;
   font-size: 16px;
 }
 
@@ -52,16 +52,16 @@ span {
 
 
 .webDevAtag {
-  color: rgb(203, 170, 193);
+  color: #FD5B78;
 }
 
 
 .civilAtag {
-  color: #B6DEDC;
+  color: #555;
 }
 
 .whoAmI {
-  color: #FAF9F4;
+  color: #555;
 }
 
 .whoAmI span {
@@ -77,7 +77,7 @@ span {
 .container{
     padding-left: 0;
     padding-right: 0;
-    border: 5px double #555;
+    /*border: 5px double #555;*/
 }
 
 .col-md-8{
@@ -85,7 +85,6 @@ span {
   padding: 6px;
 }
 .col-md-4{
-  /*border: 5px double #555;*/
   padding: 6px;
 }
 svg {
@@ -95,8 +94,8 @@ svg {
 
 .animatedText p{
   /*color: #FAF9F4;*/
-  color: black;
-  /*background-color: black;*/
+  color: #555;
+  /*background-color: #555;*/
   /*border: 2px solid blue;*/
 
   margin-bottom: 2px;
@@ -114,8 +113,8 @@ svg {
 
 .animatedText2 p{
   /*color: #FAF9F4;*/
-  color: black;
-  /*background-color: black;*/
+  color: #555;
+  /*background-color: #555;*/
   /*border: 2px solid blue;*/
 
   margin-bottom: 0;
@@ -146,14 +145,14 @@ span.GA {
 }
 
 span.purplePlanets {
-  color: rgb(203, 170, 193);
+  color: #FD5B78;
   font-size: 16px;
   margin-left: 0;
   margin-right: 0;
 }
 
 span.greenCivil {
-  color: #B6DEDC;
+  color: #33CC99;
   font-size: 16px;
   margin-left: 0;
   margin-right: 0;
@@ -168,6 +167,85 @@ span.greenCivil {
 .GA_logo img {
   width: 65px;
 }
+
+/*///*/
+
+.colorType0 {
+  fill: white;
+}
+
+
+/*///////////////////*/
+.colorType1 {
+    -webkit-animation: blink2 2s linear infinite;
+    -moz-animation: blink2 2s linear infinite;
+    animation: blink2 2s linear infinite;
+}
+@-webkit-keyframes blink2 {
+    0% { fill  : #93DFB8; }
+    33% { fill : #93DFB8; }
+    34% { fill  : #33CC99; }
+    66% { fill : #33CC99; }
+    67% { fill : #1AB385; }
+    100% { fill: #1AB385; }
+}
+
+@-moz-keyframes blink2 {
+  0% { fill  : #93DFB8; }
+  33% { fill : #93DFB8; }
+  34% { fill  : #33CC99; }
+  66% { fill : #33CC99; }
+  67% { fill : #1AB385; }
+  100% { fill: #1AB385; }
+}
+
+@keyframes blink2 {
+  0% { fill  : #93DFB8; }
+  33% { fill : #93DFB8; }
+  34% { fill  : #33CC99; }
+  66% { fill : #33CC99; }
+  67% { fill : #1AB385; }
+  100% { fill: #1AB385; }
+}
+
+/*//////////////*/
+
+.colorType2 {
+    -webkit-animation: blink3 1s linear infinite;
+    -moz-animation: blink3 1s linear infinite;
+    animation: blink3 1s linear infinite;
+}
+@-webkit-keyframes blink3 {
+    0% { fill  : #FF355E; }
+    33% { fill : #FF355E; }
+    34% { fill  : #FD5B78; }
+    66% { fill : #FD5B78; }
+    67% { fill : #FF6037; }
+    100% { fill: #FF6037; }
+}
+
+@-moz-keyframes blink3 {
+  0% { fill  : #FF355E; }
+  33% { fill : #FF355E; }
+  34% { fill  : #FD5B78; }
+  66% { fill : #FD5B78; }
+  67% { fill : #FF6037; }
+  100% { fill: #FF6037; }
+}
+
+@keyframes blink3 {
+  0% { fill  : #FF355E; }
+  33% { fill : #FF355E; }
+  34% { fill  : #FD5B78; }
+  66% { fill : #FD5B78; }
+  67% { fill : #FF6037; }
+  100% { fill: #FF6037; }
+}
+
+
+
+
+/*//////////////////////////*/
 
 @keyframes type1{
   from { width: 0; }
