@@ -20,6 +20,130 @@
   // var fill = d3.scale.category10();
 
 // "#FAF9F4", "#52B4AF", "rgb(183, 178, 224)", "#B6DEDC","rgb(203, 170, 193)"
+
+/////////////////////////////////
+
+
+//////////////////////////////////////
+
+
+
+window.onload = function() {
+  visuals();
+
+function visuals() {
+
+  // var width = window.innerWidth;
+  // var height = window.innerHeight - 150;
+
+  // var fill = d3.scale.category20();
+
+  var force = d3.layout.force()
+      .size([w, h])
+      .nodes([{}]) // initialize with a single node
+      .linkDistance(30)
+      .charge(-60)
+      .friction(0.95)
+      .gravity(0.1)
+      .on("tick", tick);
+
+
+
+  // var svg = d3.select(".d3-visuals-container")
+  //     .append("svg")
+  //       .attr("width", width)
+  //       .attr("height", height);
+  //
+  // svg.append("rect")
+  //     .attr("width", width)
+  //     .attr("height", height)
+  //     .style("fill", "white");
+
+  var nodes = force.nodes(),
+      links = force.links(),
+      node = svg1.selectAll(".node"),
+      link = svg1.selectAll(".link");
+
+  // var cursor = svg.append("circle")
+  //     .attr("r", 20)
+  //     .attr("transform", "translate(-100,-100)")
+  //     .attr("class", "cursor");
+
+  restart();
+
+  // function mousemove() {
+  //   cursor.attr("transform", "translate(" + d3.mouse(this) + ")");
+  // }
+
+  // function mousedown() {
+  //   var point = d3.mouse(this),
+  //       node = {x: point[0], y: point[1]},
+  //       n = nodes.push(node);
+  //
+  //   // add links to any nearby nodes
+  //   nodes.forEach(function(target) {
+  //     var x = target.x - node.x,
+  //         y = target.y - node.y;
+  //     if (Math.sqrt(x * x + y * y) < 30) {
+  //       links.push({source: node, target: target});
+  //     }
+  //   });
+  //
+  //   restart();
+  // }
+
+    // seed random ball every seconds
+  setInterval(function () {
+    if (nodes.length < 300) {
+      var node = {x: Math.random() * w, y: Math.random() * h},
+          n = nodes.push(node);
+      // add links to any nearby nodes
+      // nodes.forEach(function(target) {
+      //   var x = target.x - node.x,
+      //       y = target.y - node.y;
+      //   if (Math.sqrt(x * x + y * y) < 30) {
+      //     links.push({source: node, target: target});
+      //   }
+      // });
+      restart();
+    }
+  }, 50);
+
+  // draw
+  function tick() {
+    // link.attr("x1", function(d) { return d.source.x; })
+    //     .attr("y1", function(d) { return d.source.y; })
+    //     .attr("x2", function(d) { return d.target.x; })
+    //     .attr("y2", function(d) { return d.target.y; });
+
+    node.attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+  }
+
+  // starts animation
+  function restart() {
+    // link = link.data(links);
+    //
+    // link.enter().insert("line", ".node")
+    //     .attr("class", "link");
+
+    node = node.data(nodes);
+
+    node.enter().insert("circle")
+        .attr("class", "nodeExtra")
+        .attr("r", 5)
+        .call(force.drag);
+
+    force.start();
+  }
+}
+}
+
+//////////////////////////////////
+
+
+
+
 //////////////////////////////////
 		var dataset1 = {
 			nodes:[
@@ -60,14 +184,18 @@
           {source: 2, target: 9} ]
 		};
 
-		var force1 = d3.layout.force()
+
+
+		var force01 = d3.layout.force()
 								.nodes(dataset1.nodes)
 								.links(dataset1.edges)
 								.size([w, h])
                 .gravity(g)
                 .charge(c)
-                .linkDistance(d)
-								.start();
+                .linkDistance(d);
+
+    var force1 = force01.start();
+
 
 		var edges1 = svg1.selectAll("line1")
 						.data(dataset1.edges)
@@ -81,9 +209,9 @@
 
     var $forceBoxText1 = $(".forceBoxText1");
 
-		var nodes1 = svg1.selectAll("circle1")
-						.data(dataset1.nodes)
-						.enter()
+		var nodes1 = svg1.selectAll("circle1").data(dataset1.nodes);
+
+  		nodes1.enter()
 						.append("circle")
             .attr('class', function(d) { return d.class; })
 						.attr("r", function(d) { return d.radius; })
@@ -104,6 +232,7 @@
 
               console.log("you clicked on the circle1: " + d.name1 + " " + d.name2);
             });
+
 
 		var label1 = svg1.selectAll(".mytext1")
 						.data(dataset1.nodes)
@@ -135,18 +264,15 @@
     p1.text(function (d) { return d.name1; });
     p2.text(function (d) { return d.name2; });
 
-
-
-		force1.on("tick", function(){
-			edges1.attr("x1", function(d){ return d.source.x; })
-				 .attr("y1", function(d){ return d.source.y; })
-				 .attr("x2", function(d){ return d.target.x; })
-				 .attr("y2", function(d){ return d.target.y; });
-			nodes1.attr("cx", function(d){ return d.x; })
-				 .attr("cy", function(d){ return d.y; });
-			 p1.attr("x", function(d){ return d.x; })
-    			 .attr("y", function (d) {return d.y - 4; });
+    force1.on("tick", function(){
+      edges1.attr("x1", function(d){ return d.source.x; })
+         .attr("y1", function(d){ return d.source.y; })
+         .attr("x2", function(d){ return d.target.x; })
+         .attr("y2", function(d){ return d.target.y; });
+      nodes1.attr("cx", function(d){ return d.x; })
+         .attr("cy", function(d){ return d.y; });
+       p1.attr("x", function(d){ return d.x; })
+           .attr("y", function (d) {return d.y - 4; });
        p2.attr("x", function(d){ return d.x; })
-      			.attr("y", function (d) {return d.y + 14; });
-
-		});
+            .attr("y", function (d) {return d.y + 14; });
+    });
