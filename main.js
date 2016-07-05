@@ -1,37 +1,33 @@
-  var $forceBox1 = $(".forceBox1");
-  // var w = $forceBox1.width();
-	// var h = window.innerHeight;
-  var w = 900;
-	var h = 765;
-  var g = 0.05;
-  var c = -800;
-  var d = 275;
+
+
+var $forceBox1 = $(".forceBox1");
+// var w = $forceBox1.width();
+// var h = window.innerHeight;
+var w = 900;
+var h = 765;
+var g = 0.05;
+var c = -800;
+var d = 275;
 
 
 
-  var svg1 = d3.select(".forceBox1")
-          .insert("svg",":nth-child(2)")
-          // .append("svg")
-          // .attr("width", w)
-          // .attr("height", h);
-          .attr("viewBox", "0 0 " + w + " " + h )
-          .attr("preserveAspectRatio", "xMidYMid meet");
-
-  // var fill = d3.scale.category10();
-
-// "#FAF9F4", "#52B4AF", "rgb(183, 178, 224)", "#B6DEDC","rgb(203, 170, 193)"
-
-/////////////////////////////////
+var svg1 = d3.select(".forceBox1")
+        .insert("svg",":nth-child(2)")
+        // .append("svg")
+        // .attr("width", w)
+        // .attr("height", h);
+        .attr("viewBox", "0 0 " + w + " " + h )
+        .attr("preserveAspectRatio", "xMidYMid meet");
 
 
 //////////////////////////////////////
 
 
 
-window.onload = function() {
-  visuals();
+// window.onload = function() {
 
-function visuals() {
+
+var extraNodes = function () {
 
   // var width = window.innerWidth;
   // var height = window.innerHeight - 150;
@@ -41,8 +37,8 @@ function visuals() {
   var force = d3.layout.force()
       .size([w, h])
       .nodes([{}]) // initialize with a single node
-      .linkDistance(30)
-      .charge(-60)
+      .linkDistance(120)
+      .charge(-140)
       .friction(0.95)
       .gravity(0.1)
       .on("tick", tick);
@@ -94,7 +90,7 @@ function visuals() {
 
     // seed random ball every seconds
   setInterval(function () {
-    if (nodes.length < 300) {
+    if (nodes.length < 175) {
       var node = {x: Math.random() * w, y: Math.random() * h},
           n = nodes.push(node);
       // add links to any nearby nodes
@@ -107,7 +103,7 @@ function visuals() {
       // });
       restart();
     }
-  }, 50);
+  }, 75);
 
   // draw
   function tick() {
@@ -132,20 +128,21 @@ function visuals() {
     node.enter().insert("circle")
         .attr("class", "nodeExtra")
         .attr("r", 5)
+        .style("stroke", "black")
+        .style("stroke-width", 1)
+        .style("fill", "transparent")
         .call(force.drag);
 
     force.start();
   }
 }
-}
 
-//////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
 
+var graphNodes = function () {
 
-
-
-//////////////////////////////////
-		var dataset1 = {
+  	var dataset1 = {
 			nodes:[
 					{name1:"Who",name2:"am I?", class: "colorType0", radius: 90,
               description: 'I am a French-Australian web developer who became passionate by web development lately.<br><br>I have been a civil engineer/project manager for the past 8 years (the last 5 years in Australia). I managed various types of projects such as wind farm, power plant, dam and building.<br><br>Looking for new challenges I decided to get involved in the start-up community. I even decided to start my own business: Value Your Time.<br>But after few months I realised that I enjoy developing web solutions much more than every other aspect of the business.<br><br>The 12 weeks full-time course that I just did with General Assembly confirmed everything I thought: I am willing to become a web developer.<br><br>You can see below the links to my interactive resume code, to the pdf version of my resume, to my linkedin and to Value Your Time website:<br><a class="whoAmI" href="https://github.com/cedricamoyal/Interactive-Resume" target="_blank"><span class="devicons devicons-github_badge"></span></a><a class="whoAmI" href="CedricAmoyal2016WD.pdf" target="_blank"><span><i class="fa fa-file-text-o" aria-hidden="true"></i></span></a> <a class="whoAmI" href="https://au.linkedin.com/in/cedric-amoyal-83b5a747" target="_blank"><span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a><a class="whoAmI" href="http://www.valueyourtime.com.au/" target="_blank"><span><i class="fa fa-hourglass" aria-hidden="true"></i></span></a><br>Contact me:<br>Cedric Amoyal, 0423 749 645<br>cedric.amoyal@gmail.com'},
@@ -276,3 +273,11 @@ function visuals() {
        p2.attr("x", function(d){ return d.x; })
             .attr("y", function (d) {return d.y + 14; });
     });
+
+  }
+
+    extraNodes();
+
+    window.setTimeout(graphNodes, 2500);
+
+// }
