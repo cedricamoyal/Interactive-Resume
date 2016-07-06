@@ -22,17 +22,7 @@ var svg1 = d3.select(".forceBox1")
 
 //////////////////////////////////////
 
-
-
-// window.onload = function() {
-
-
 var extraNodes = function () {
-
-  // var width = window.innerWidth;
-  // var height = window.innerHeight - 150;
-
-  // var fill = d3.scale.category20();
 
   var force = d3.layout.force()
       .size([w, h])
@@ -43,85 +33,30 @@ var extraNodes = function () {
       .gravity(0.1)
       .on("tick", tick);
 
-
-
-  // var svg = d3.select(".d3-visuals-container")
-  //     .append("svg")
-  //       .attr("width", width)
-  //       .attr("height", height);
-  //
-  // svg.append("rect")
-  //     .attr("width", width)
-  //     .attr("height", height)
-  //     .style("fill", "white");
-
   var nodes = force.nodes(),
       links = force.links(),
       node = svg1.selectAll(".node"),
       link = svg1.selectAll(".link");
 
-  // var cursor = svg.append("circle")
-  //     .attr("r", 20)
-  //     .attr("transform", "translate(-100,-100)")
-  //     .attr("class", "cursor");
-
   restart();
 
-  // function mousemove() {
-  //   cursor.attr("transform", "translate(" + d3.mouse(this) + ")");
-  // }
-
-  // function mousedown() {
-  //   var point = d3.mouse(this),
-  //       node = {x: point[0], y: point[1]},
-  //       n = nodes.push(node);
-  //
-  //   // add links to any nearby nodes
-  //   nodes.forEach(function(target) {
-  //     var x = target.x - node.x,
-  //         y = target.y - node.y;
-  //     if (Math.sqrt(x * x + y * y) < 30) {
-  //       links.push({source: node, target: target});
-  //     }
-  //   });
-  //
-  //   restart();
-  // }
-
-    // seed random ball every seconds
   setInterval(function () {
     if (nodes.length < 175) {
       var node = {x: Math.random() * w, y: Math.random() * h},
           n = nodes.push(node);
-      // add links to any nearby nodes
-      // nodes.forEach(function(target) {
-      //   var x = target.x - node.x,
-      //       y = target.y - node.y;
-      //   if (Math.sqrt(x * x + y * y) < 30) {
-      //     links.push({source: node, target: target});
-      //   }
-      // });
+
       restart();
     }
   }, 150);
 
-  // draw
+
   function tick() {
-    // link.attr("x1", function(d) { return d.source.x; })
-    //     .attr("y1", function(d) { return d.source.y; })
-    //     .attr("x2", function(d) { return d.target.x; })
-    //     .attr("y2", function(d) { return d.target.y; });
 
     node.attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
   }
 
-  // starts animation
   function restart() {
-    // link = link.data(links);
-    //
-    // link.enter().insert("line", ".node")
-    //     .attr("class", "link");
 
     node = node.data(nodes);
 
@@ -138,14 +73,13 @@ var extraNodes = function () {
 }
 
 ////////////////////////////////////////////////
-////////////////////////////////////////////////
 
 var graphNodes = function () {
 
   	var dataset1 = {
 			nodes:[
 					{name1:"Who",name2:"am I?", class: "colorType0", radius: 90,
-              description: 'I am a French-Australian web developer who became passionate by web development lately.<br><br>I have been a civil engineer/project manager for the past 8 years (the last 5 years in Australia). I managed various types of projects such as wind farm, power plant, dam and building.<br><br>Looking for new challenges I decided to get involved in the start-up community. I even decided to start my own business: Value Your Time.<br>But after few months I realised that I enjoy developing web solutions much more than every other aspect of the business.<br><br>The 12 weeks full-time course that I just did with General Assembly confirmed everything I thought: I am willing to become a web developer.<br><br>You can see below the links to my interactive resume code, to the pdf version of my resume, to my linkedin and to Value Your Time website:<br><a class="whoAmI" href="https://github.com/cedricamoyal/Interactive-Resume" target="_blank"><span class="devicons devicons-github_badge"></span></a><a class="whoAmI" href="CedricAmoyal2016WD.pdf" target="_blank"><span><i class="fa fa-file-text-o" aria-hidden="true"></i></span></a> <a class="whoAmI" href="https://au.linkedin.com/in/cedric-amoyal-83b5a747" target="_blank"><span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a><a class="whoAmI" href="http://www.valueyourtime.com.au/" target="_blank"><span><i class="fa fa-hourglass" aria-hidden="true"></i></span></a><br>Contact me:<br>Cedric Amoyal, 0423 749 645<br>cedric.amoyal@gmail.com'},
+              description: 'I am a French-Australian web developer who became passionate by web development lately.<br><br>I have been a civil engineer/project manager for the past 8 years (the last 5 years in Australia). I managed various types of projects such as wind farm, power plant, dam and building.<br><br>Looking for new challenges I decided to get involved in the start-up community. I even decided to start my own business: Value Your Time.<br>But after few months I realised that I enjoy developing web solutions much more than every other aspect of the business.<br><br>The 12 weeks full-time course that I just completed with General Assembly confirmed everything I thought: I am willing to become a web developer.<br><br>You can see below the links to my interactive resume code, to the pdf version of my resume, to my linkedin and to Value Your Time website:<br><a class="whoAmI" href="https://github.com/cedricamoyal/Interactive-Resume" target="_blank"><span class="devicons devicons-github_badge"></span></a><a class="whoAmI" href="CedricAmoyal2016WD.pdf" target="_blank"><span><i class="fa fa-file-text-o" aria-hidden="true"></i></span></a> <a class="whoAmI" href="https://au.linkedin.com/in/cedric-amoyal-83b5a747" target="_blank"><span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a><a class="whoAmI" href="http://www.valueyourtime.com.au/" target="_blank"><span><i class="fa fa-hourglass" aria-hidden="true"></i></span></a><br>Contact me:<br>Cedric Amoyal, 0423 749 645<br>cedric.amoyal@gmail.com'},
 
 	        {name1:"Previous Life:",name2: "Civil Engineer", class: "colorType1", radius: 70,
               description: 'I think that there are many common points between the way you build civil structures and the way you build websites.<br><br># You need to have a good understanding of your clients\’ needs. You need to be able to offer them different options and to explain them the good/bad points of each option and the cost implications.<br># From very few/incomplete documents, you have to be able to quickly understand your environment and the main difficulties.<br># Then you have to plan ahead all your works and organise your teams. It is very important to give a clear scope of work to everyone. For this you need to break down your projects into smaller units.<br># At each step you have to foresee and to anticipate on future problems. No matters how good you are, problems/bugs will come up and you have to take action asap in order to fix it for your project to keep going.<br><br> Doing all of the above, you always need to keep in mind your deadlines, your budget and your client satisfaction. Passion, efforts and very good people skills are essential.'},
@@ -280,5 +214,3 @@ var graphNodes = function () {
     extraNodes();
 
     window.setTimeout(graphNodes, 2500);
-
-// }
