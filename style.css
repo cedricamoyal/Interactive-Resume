@@ -1,10 +1,7 @@
 body {
-  /*background-image:url("http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSquares_1920x1234.jpg");*/
-  /*background-image:url("http://www.easyfreepatterns.com/patterns/7/light-blue-chevron-backgrounds-fashionplacefacecom-7804.png");*/
-    /*background-image:url("light-blue-chevron-backgrounds-fashionplacefacecom-7804.png");*/
-    /*background-image:url("http://wallpapercave.com/wp/xX2GRj6.gif");*/
-    /*background-image:url("stars.png");*/
-    background-image:url("http://cache1.asset-cache.net/xd/161735917.jpg?v=1&c=IWSAsset&k=2&d=62CA815BFB1CE480221078211210EC6F73E7DAAD5CA538694467CB8CF7BACD8ECB71033FD61A2B8B");
+
+  /*background-image:url("http://cache1.asset-cache.net/xd/161735917.jpg?v=1&c=IWSAsset&k=2&d=62CA815BFB1CE480221078211210EC6F73E7DAAD5CA538694467CB8CF7BACD8ECB71033FD61A2B8B");*/
+  /*background-image:url("IMG_5602.JPG");*/
 
   background-color: white;
 
@@ -33,14 +30,14 @@ span {
   /*border: 1px solid #555;*/
   text-align: left;
   padding: 10px;
-  color: #FAF9F4;
+  color: #555;
   /*color: #FAF9F4;*/
   /*background-color: #555;*/
 }
 
 .forceBoxText1 p {
   /*color: #FAF9F4;*/
-  color: #FAF9F4;
+  color: #555;
   font-size: 16px;
 }
 
@@ -56,7 +53,7 @@ span {
 }
 
 .whoAmI {
-  color: #FAF9F4;
+  color: #555;
 }
 
 .whoAmI span {
@@ -77,6 +74,7 @@ span {
 
 .col-md-8{
   border-right: 5px double #555;
+  /*border: 2px solid pink;*/
   padding: 6px;
 }
 .col-md-4{
@@ -87,9 +85,9 @@ svg {
   /*margin-bottom: 0;*/
 }
 
-.animatedText p{
+.animatedText p {
   /*color: #FAF9F4;*/
-  color: #FAF9F4;
+  color: #555;
   /*background-color: #555;*/
   /*border: 2px solid blue;*/
 
@@ -104,11 +102,9 @@ svg {
   animation: type1 6s steps(100, end);
 }
 
-
-
-.animatedText2 p{
+.animatedText2 p {
   /*color: #FAF9F4;*/
-  color: #FAF9F4;
+  color: #555;
   /*background-color: #555;*/
   /*border: 2px solid blue;*/
 
@@ -130,8 +126,8 @@ svg {
 span.blink {
   animation: blink 1s infinite;
   font-size: 16px;
-
 }
+
 span.GA {
   color: red;
   font-size: 16px;
@@ -167,6 +163,22 @@ span.greenCivil {
 
 .colorType0 {
   fill: #FAF9F4;
+}
+
+.colorType0:hover {
+    cursor: pointer;
+}
+
+.colorType1:hover {
+    cursor: pointer;
+}
+
+.colorType2:hover {
+    cursor: pointer;
+}
+
+.mytext1:hover {
+    cursor: pointer;
 }
 
 
@@ -206,9 +218,9 @@ span.greenCivil {
 /*//////////////*/
 
 .colorType2 {
-    -webkit-animation: blink3 1s linear infinite;
-    -moz-animation: blink3 1s linear infinite;
-    animation: blink3 1s linear infinite;
+    -webkit-animation: blink3 2s linear infinite;
+    -moz-animation: blink3 2s linear infinite;
+    animation: blink3 2s linear infinite;
 }
 @-webkit-keyframes blink3 {
     0% { fill  : #8FD8D8; }
@@ -236,6 +248,7 @@ span.greenCivil {
   67% { fill : #6CDAE7; }
   100% { fill: #6CDAE7; }
 }
+
 
 
 

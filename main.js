@@ -103,7 +103,7 @@ var extraNodes = function () {
       // });
       restart();
     }
-  }, 75);
+  }, 150);
 
   // draw
   function tick() {
@@ -129,7 +129,7 @@ var extraNodes = function () {
         .attr("class", "nodeExtra")
         .attr("r", 5)
         .style("stroke", "black")
-        .style("stroke-width", 1)
+        .style("stroke-width", 2)
         .style("fill", "transparent")
         .call(force.drag);
 
@@ -150,7 +150,7 @@ var graphNodes = function () {
 	        {name1:"Previous Life:",name2: "Civil Engineer", class: "colorType1", radius: 70,
               description: 'I think that there are many common points between the way you build civil structures and the way you build websites.<br><br># You need to have a good understanding of your clients\’ needs. You need to be able to offer them different options and to explain them the good/bad points of each option and the cost implications.<br># From very few/incomplete documents, you have to be able to quickly understand your environment and the main difficulties.<br># Then you have to plan ahead all your works and organise your teams. It is very important to give a clear scope of work to everyone. For this you need to break down your projects into smaller units.<br># At each step you have to foresee and to anticipate on future problems. No matters how good you are, problems/bugs will come up and you have to take action asap in order to fix it for your project to keep going.<br><br> Doing all of the above, you always need to keep in mind your deadlines, your budget and your client satisfaction. Passion, efforts and very good people skills are essential.'},
 					{name1:"New Life:",name2:"Web Developer", class: "colorType2", radius: 70,
-              description: 'I just did the 12 weeks full-time Web Development Immersive Program with  <a href="https://generalassemb.ly/education/web-development-immersive" target="_blank"><span class="GA">General Assembly</span></a> in Sydney.<div class="GA_logo"><a href="https://generalassemb.ly/education/web-development-immersive" target="_blank"><img src="GA_logo.png" alt="GA logo"></a></div># What did I learn during the WDi program?<br><br>The WDi Program taught me the skills I need to kickstart my career as a web developer.<br>From programming fundamentals (HTML, CSS, JavaScript, jQuery, AJAX, Ruby, D3.js) to launching full-stack web apps (Rails, Backbone.js, Bootstrap), I learned to solve problems with code while applying industry best practices in a collaborative environment  (Github, Heroku).<br><br># What projects did I do?<br><br>While I was studying at <a href="https://generalassemb.ly/education/web-development-immersive" target="_blank"><span class="GA">General Assembly</span></a> I developed 4 projects, you can have a look at them by selecting the <span class="purplePlanets">planets</span>. '},
+              description: 'I just did the 12 weeks full-time Web Development Immersive Program with  <a href="https://generalassemb.ly/education/web-development-immersive" target="_blank"><span class="GA">General Assembly</span></a> in Sydney.<div class="GA_logo"><a href="https://generalassemb.ly/education/web-development-immersive" target="_blank"><img src="GA_logo.png" alt="GA logo"></a></div># What did I learn during the WDi program?<br><br>The WDi Program taught me the skills I need to kickstart my career as a web developer.<br>From programming fundamentals (HTML, CSS, JavaScript, jQuery, AJAX, Ruby, D3.js) to launching full-stack web apps (Rails, Backbone.js, Bootstrap), I learned to solve problems with code while applying industry best practices in a collaborative environment  (Github, Heroku).<br><br># What projects did I do?<br><br>While I was studying at <a href="https://generalassemb.ly/education/web-development-immersive" target="_blank"><span class="GA">General Assembly</span></a> I developed 4 projects, you can have a look at them by selecting the <span class="purplePlanets">blue circles on the left</span>. '},
 
 					{name1:"Positions",name2:"& Projects", class: "colorType1", radius: 55,
               description: '<span class="greenCivil">Project Manager - MOITS Pty Ltd</span><br>July 2015 – November 2015 – Sydney, Australia<br><br>As a Project Manager at MOITS, I managed multiple projects in a short amount of time.<br><br><span class="greenCivil">Project Engineer - Mainland Civil Pty Ltd</span><br>February 2012 – July 2015 – Sydney, Australia<br><br># Warriewood Square Stage 1 at Warriewood Shopping Centre, (BUILT), ($1M)<br># Taxiway widening associated with T2 Pier B Apron works at Sydney Airport, (SACL), ($3.5M)<br># The Australian Institute for Nanoscience, (The University of Sydney, CIS), ($7M)<br># Charles Perkins Centre, (The University of Sydney, CIS / BMPX), ($40M)<br><br><span class="greenCivil">Site Engineer - Macmahon Contractors Pty Ltd</span><br>April 2011 - February 2012 – Jindabyne, Australia<br><br># Jindabyne Dam Spillway, (Snowy Hydro), ($10M), NSW, Australia<br><br>You can see more positions/projects on the pdf version of my resume:<a class="civilAtag" href="CedricAmoyal2016WD.pdf" target="_blank"><span><i class="fa fa-file-text-o" aria-hidden="true"></i></span></a>'},
@@ -216,6 +216,7 @@ var graphNodes = function () {
             .style("stroke", "#555")
             .style("stroke-width", 3)
 						.call(force1.drag)
+
             .on("click", function (d) {
               $forceBoxText1.empty();
 
